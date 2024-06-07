@@ -10,13 +10,13 @@
 </head>
 <style>
     body {
-    background-image: url(img/brain-5.jpg);
+    background-image: url(img/geometric.png);
     padding: 0px;
     margin: 0px;
-    height: 100;
+    height: 100vh;
     background-size: cover; /* mantém a proporção e redimensiona para cobrir o espaço todo */
     background-position: center; /* centraliza a imagem */
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     }
     .navbar-cor {
     padding: 1px;
@@ -29,17 +29,10 @@
     ul {
     text-align: center;
   }
-  .coluna {
-    background-color: aliceblue;
-    max-height: 1000px;
-    border-radius: 10px;
-    box-shadow: -10px 10px 20px rgb(131, 182, 131);
-    overflow: hidden;
-  }
   /* estilo dos itens da barra de nav */
   .navbar-nav .nav-link {
     margin-right: 20px; 
-    color: rgb(68, 124, 244) !important; /* !important dá prioridade */
+    color: rgb(195, 63, 15) !important; /* !important dá prioridade */
     font-size: 1.1rem;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -52,8 +45,8 @@
   }
   .nav-item:hover .nav-link {
     animation: pulse 3s infinite;
-    color:rgb(47, 138, 67) !important;
-    background-image:linear-gradient(rgb(125, 210, 250),rgb(99, 196, 248));
+    color:rgb(205, 81, 24) !important;
+    background-image:linear-gradient(rgb(250, 202, 125),rgb(248, 154, 99));
     border-radius: 10px;
     text-decoration: underline;
     padding-right: 5px;
@@ -62,6 +55,23 @@
   .L-preta {
     color:black;
     font-family: 'Times New Roman', Times, serif;
+    word-wrap: break-word; /*força a quebra de linha, evitando que o texto saia pra fora do box*/
+    word-break: break-word;/*permite que as palavras longas sejam quebradas*/
+    hyphens: auto;/*Habilita a hifen*/
+  }
+  .container-1 {
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: -10px 10px 20px rgb(254, 164, 74);
+    overflow: hidden;
+  }
+  .text-1 {
+    padding: 20px;
+  }
+  .image1 img {
+    max-width: 100%;
+    border-radius: 10px;
   }
 </style>
 <body>
@@ -91,6 +101,55 @@
              </li>
            </ul>
            </div>
-    
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container my-5"> <!--aplica margem no eixo Y-->
+      <div class="container-1">
+        <div class="row">
+          <div class="col-md-6 order-md-1 image1"> <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
+            <img src="img/logo-1.jpg" alt=".">
+          </div>
+          <div class="col-md-6 order-md-2 text-1"> 
+            <div class="L-preta">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
+                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
+                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
+                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
+                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+              </p>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    <div class="container my-5">
+      <div class="container-1">
+        <div class="row">
+          <div class="col-md-6 order-md-1 image1">
+            <img src="img/imagetecno.png" alt=".">
+          </div>
+          <div class="col-md-6 order-md-2 text-1">
+            <div class="L-preta">
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
+                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
+                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
+                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
+                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+              </p>
+            </div>
+            <br>
+            <div class="col-md-6 order-md-1 image1 mx-auto">
+              <img src="img/logo-1.jpg" alt=".">
+            </div>
+          </div>
+        </div>
+           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+           integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+           crossorigin="anonymous"></script>
+         <script src="js/bootstrap.bundle.min.js"></script>   
 </body>
 </html>
