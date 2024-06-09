@@ -63,6 +63,7 @@
   .L-preta {
     color: black;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     word-wrap: break-word; /*força a quebra de linha, evitando que o texto saia pra fora do box*/
     word-break: break-word;/*permite que as palavras longas sejam quebradas*/
     hyphens: auto;/*Habilita a hifen*/
@@ -79,8 +80,34 @@
   }
   .image1 img {
     max-width: 100%;
-    border-radius: 10px;
-  }
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    height: auto;
+    }
+    /* Estilos da barra de rolagem */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #a0f1a9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #59b86a;
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #259743;
+    }
+
+    /* Estilos para Firefox */
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: #438948 #9cee91;
+    }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -123,48 +150,67 @@
   <div class="container my-5"> <!--aplica margem no eixo Y-->
     <div class="container-1">
       <div class="row">
-        <div class="col-md-6 order-md-1 image1"> <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
-          <img src="img/logo-1.jpg" alt=".">
-        </div>
-        <div class="col-md-6 order-md-2 text-1"> 
+        <div class="col-md-6 order-md-1 text-1">  <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
           <div class="L-preta">
-            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-              utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-              para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-              salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-              Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-              mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+            <h2 class="mb-4 text-success">O que é consumo consciente de energia?</h2>
+            <p>O consumo consciente de energia é uma abordagem que incentiva o uso responsável e sustentável desse recurso. 
+              Isso envolve a conscientização da sociedade – especialmente empresas e indivíduos – sobre os impactos ambientais,
+               econômicos e sociais decorrentes do consumo e produção de energia.
+              Utilizar energia de forma consciente implica a adoção de práticas como:</p>
+              
+             <p>- Redução do desperdício de eletricidade.
+              <br>
+              - Utilização de fontes de energia mais sustentáveis e limpas.</p>
+        
+              <p>Dessa maneira, é possível contribuir para a preservação do meio ambiente, além de beneficiar as finanças
+                 de consumidores e empresas. Consumir de forma responsável começa com hábitos simples e rotineiros que podem ser implementados em casa, em negócios 
+              ou em qualquer lugar onde haja consumo de eletricidade.              
             </p>
           </div>
-          <br>
-          <div class="col-md-6 order-md-1 image1 mx-auto">
-            <img src="img/maozinha.png" alt=".">
+          <div class="col-md-4 order-md-2 image1 mx-auto">
+            <img src="img/desenho-personagem.jpeg" alt="desenho homem sustentável">
+        </div>
+        </div>
+          <div class="col-md-6 order-md-3 image1">
+            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/ImgPagEnergia.jpeg" class="d-block" alt="Imagem de Lampada">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/ImgPagEnergiaII.jpeg" class="d-block" alt="Imagem Sustentabilidade">
+                </div>
+              </div>
           </div>
+          <br>
+          </div>
+          <div class="col-md-15 order-md-4 text-1">  
+            <div class="L-preta">
+              <h2 class="mb-4 text-success">Por que o consumo consciente de energia é importante?</h2>
+              <p>O consumo consciente de energia é uma necessidade crucial para a construção de um futuro sustentável. 
+                Esta prática vai além da economia na conta de luz, representando um compromisso com a preservação ambiental, 
+                o bem-estar social e a garantia de um planeta saudável para as próximas gerações.</p>
+              <p><span class="text-success">Impactos Ambientais:</span> A geração de energia, principalmente a partir de combustíveis fósseis, 
+                intensifica o aquecimento global, causando efeitos devastadores como o aumento do nível do mar, eventos climáticos extremos,
+                perda de biodiversidade e ameaças à segurança alimentar. Reduzir o consumo de energia significa diminuir a emissão 
+                desses gases, combatendo as mudanças climáticas e protegendo o meio ambiente.</p>
+              <p><span class="text-success">Recursos Naturais Finitos:</span> Combustíveis fósseis são recursos não renováveis e com estoques limitados.
+                 O consumo desenfreado acelera o esgotamento desses recursos, comprometendo a segurança energética e elevando os custos da energia no futuro. 
+                 O consumo consciente contribui para a preservação desses recursos para as próximas gerações.</p>
+              <p>A geração de energia também está relacionada a desafios sociais, como desigualdade no acesso à energia, impactos ambientais em 
+                comunidades locais e conflitos por recursos naturais. O consumo consciente promove um uso mais justo e equitativo da energia, contribuindo 
+                para a construção de uma sociedade mais justa e sustentável. Consumir energia de maneira consciente é uma prática essencial para garantir 
+                a preservação ambiental. O uso de recursos naturais deve ser proporcional à capacidade do planeta de fornecê-los e renová-los, assegurando 
+                que as futuras gerações não sejam prejudicadas.</p>
+              <p>Além disso, é crucial focar na equidade na distribuição de energia. Conforme destacado em um relatório das Nações Unidas, atualmente, 
+                733 milhões de pessoas no mundo ainda não têm acesso à eletricidade. O consumo consciente de energia também contribui para a redução dos
+                 custos financeiros para indivíduos e empresas, liberando recursos que podem ser investidos em outras áreas importantes da economia.</p>
+              <p>Vale ressaltar que esse tipo de consumo pode incentivar a adoção de outros hábitos mais sustentáveis, como uma gestão mais responsável 
+                dos recursos hídricos e o descarte adequado de resíduos.</p>
+            </div>
         </div>
       </div>
     </div>
-  <div class="container my-5"> 
-    <div class="container-1">
-      <div class="row">
-        <div class="col-md-6 order-md-1 image1"> 
-          <img src="img/logo-1.jpg" alt=".">
-        </div>
-        <div class="col-md-6 order-md-2 text-1">
-          <div class="L-preta">
-            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-              utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-              para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-              salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-              Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-              mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-            </p>
-          </div>
-          <br>
-          <div class="col-md-6 order-md-1 image1 mx-auto">
-            <img src="img/maozinha.png" alt=".">
-          </div>
-        </div>
-      </div>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

@@ -55,6 +55,7 @@
   .L-preta {
     color:black;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     word-wrap: break-word; /*força a quebra de linha, evitando que o texto saia pra fora do box*/
     word-break: break-word;/*permite que as palavras longas sejam quebradas*/
     hyphens: auto;/*Habilita a hifen*/
@@ -71,8 +72,34 @@
   }
   .image1 img {
     max-width: 100%;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    height: auto;
   }
+  /* Estilos da barra de rolagem */
+  ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #76b1f9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #0c73f1;
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1224c9;
+    }
+
+    /* Estilos para Firefox */
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: #578efb #1160ff;
+    }
 </style>
 <body>    
     <!-- Navbar -->
@@ -108,46 +135,69 @@
     <div class="container my-5"> <!--aplica margem no eixo Y-->
       <div class="container-1">
         <div class="row">
-          <div class="col-md-6 order-md-1 image1"> <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
-            <img src="img/logo-1.jpg" alt=".">
-          </div>
-          <div class="col-md-6 order-md-2 text-1">
+          <div class="col-md-6 order-md-1 text-1">  <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
             <div class="L-preta">
-              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-              </p>
+              <h2 class="mb-4 text-primary">O que são tecnologias sustentáveis?</h2>
+              <p>Tecnologia sustentável refere-se a qualquer tecnologia empregada com o propósito de preservar os recursos naturais 
+                e fomentar o desenvolvimento social e econômico para as gerações futuras. Trata-se de um conjunto de técnicas, habilidades,
+                 métodos e processos utilizados para criar um produto.</p>
             </div>
             <br>
+            <br>
+            <div class="col-md-5 order-md-2 image1 mx-auto">
+              <img src="img/ImgPersonaTecno.jpeg" alt="desenho homem sustentável">
+          </div>
+          </div>
+            <div class="col-md-6 order-md-3 image1">
+              <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/imgPagTecnologia.jpeg" class="d-block" alt="Imagem Sustentabilidade e Tecnologias">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/imgPagTecnologia2.jpeg" class="d-block" alt="Imagem Sustentabilidade e Tecnologias">
+                  </div>
+                </div>
+            </div>
+            <br>
+            </div>
+            <div class="col-md-15 order-md-4 text-1">  
+              <div class="L-preta">
+                <h2 class="mb-4 text-primary">Tecnologias Sustentáveis e os Objetivos de Desenvolvimento Sustentável</h2>
+                <p>As tecnologias desempenham papéis cruciais em várias frentes:</p>
+                <p><span class="text-primary">Substituição de Recursos Não Renováveis por Renováveis:</span> 
+                  <br>
+                  A inovação tecnológica possibilita a substituição de recursos não renováveis por alternativas renováveis. Por exemplo, podemos optar
+                   por lâmpadas alimentadas por energia solar para iluminar ruas e caminhos, em vez de lâmpadas incandescentes conectadas à rede elétrica local.
+                    Esse conceito também se estende à substituição de materiais não biodegradáveis por biodegradáveis na produção industrial.</p>
+                <p><span class="text-primary">Eficiência Energética e Uso Sustentável de Recursos:</span>
+                <br>
+                Tecnologias sustentáveis podem aprimorar a usabilidade de máquinas, tornando-as mais eficientes. Por exemplo, com a utilização de sensores 
+                de consumo/presença, podemos reduzir significativamente o desperdício de água em torneiras, evitando deixá-las abertas desnecessariamente. 
+                O mesmo princípio se aplica à gestão de energia elétrica, utilizando sensores de movimento, e à mobilidade, com sistemas de desligamento
+               automático de motores.
+                </p>
+                <h4 class="mb-4 text-primary">A inovação tecnológica desempenha um papel fundamental na consecução dos Objetivos de Desenvolvimento Sustentável (ODS) 
+                  de várias maneiras</h4>
+                <p><span class="text-primary">Conectando o Mundo:</span>
+                  <br>
+                A tecnologia pode conectar o mundo de maneiras inéditas. Por exemplo, plataformas de ensino à distância tornam a educação mais acessível
+                 para pessoas em regiões remotas, enquanto as redes sociais promovem a conscientização sobre questões importantes e reúnem pessoas com ideias afins.</p>
+                <p><span class="text-primary">Melhorando a Comunicação:</span>
+                  <br>
+                  As tecnologias da informação aprimoram a comunicação de várias maneiras. Por exemplo, a videoconferência possibilita conexões com pessoas 
+                  distantes, sem a necessidade de viagens. As mensagens instantâneas ajudam a manter contato com amigos e familiares, independentemente da 
+                  localização.</p>
+                <p><span class="text-primary">Reduzindo o Desperdício:</span>
+                <br>
+                A inovação tecnológica pode minimizar o desperdício de recursos de diversas formas. Por exemplo, materiais reciclados podem ser reutilizados na 
+                fabricação de novos produtos, e a impressão 3D permite a criação de produtos personalizados, reduzindo a necessidade de embalagens excessivas.
+                </p>
+              </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="container-1">
-        <div class="row">
-          <div class="col-md-6 order-md-1 image1">
-            <img src="img/imagetecno.png" alt=".">
-          </div>
-          <div class="col-md-6 order-md-2 text-1">
-            <div class="L-preta">
-              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-              </p>
-            </div>
-            <br>
-            <div class="col-md-6 order-md-1 image1 mx-auto">
-              <img src="img/logo-1.jpg" alt=".">
-            </div>
-          </div>
-        </div>
-           </div>  
            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
            crossorigin="anonymous"></script>

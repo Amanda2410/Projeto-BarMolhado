@@ -33,7 +33,7 @@
   }
   /* estilo dos itens da barra de nav */
   .navbar-nav .nav-link {
-    margin-right: 1px; 
+    margin-right: 20px; 
     color: rgb(68, 124, 244) !important; /* !important dá prioridade */
     font-size: 1.1rem;
     font-weight: bold;
@@ -58,13 +58,7 @@
     color:black;
     font-family: 'Times New Roman', Times, serif;
   }
-  /* flexbox */
-  .container-blabla {
-      display: flex; /* define o container como flexbox*/
-      justify-content: center; /* centraliza o texto horizontalmente */
-      align-items: center; /* centraliza na vertical */
-      height: 15vh; /* altura do container */
-    }
+
   .coluna {
     background-color: aliceblue;
     max-height: 1000px;
@@ -72,12 +66,22 @@
     box-shadow: -10px 10px 20px rgb(131, 182, 131);
     overflow: hidden;
   }
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
   .icone-da-seta {
     margin-top: 10px; 
     color: rgb(61, 178, 61); 
     font-size: 40px;
     display: block; /* Para centralizar o ícone */
     text-align: left;
+  }
+  .icone-da-seta:hover {
+    background-image: linear-gradient(45deg, rgb(92, 230, 154),rgb(59, 141, 93));
+    text-align: center;
+    border-radius: 30px;
+    color: bisque;
   }
   .leiamais {
     text-decoration: none;
@@ -88,10 +92,33 @@
     color: white;
   }
   .container {
-    margin-top: 115px;
+    margin-top: 90px;
     padding: 40px;
   }
+ /* Estilos da barra de rolagem */
+ /* Pseudo-elementos, são palavras-chave adicionadas a seletores que permitem estilizar partes específicas de um elemento HTML */
+ ::-webkit-scrollbar { /*Este pseudo-elemento aplica-se à barra de rolagem em navegadores baseados no WebKit, como Chrome e Safari*/
+       width: 12px; /*Define a largura da barra de rolagem */
+    }
 
+    ::-webkit-scrollbar-track { /*Define o estilo ao trilho da barra de rolagem*/
+      background: #82b775;
+    }
+
+    ::-webkit-scrollbar-thumb {  /*refere-se a parte que se move*/
+      background: #458838;
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover { /*Define uma cor a parte que se move quando o mouse passa sobre*/
+      background: #2a7620;
+    }
+
+    /* Estilos para Firefox */
+    body {
+      scrollbar-width:auto; /*define uma barra de rolagem mais fina*/
+      scrollbar-color: #206632; /*Define cor a barra*/
+    }
 </style>
 <body>
 <!-- barra de navegação -->
@@ -135,8 +162,24 @@
       <div class="row g-5"> 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="p-3 coluna L-preta">
-            <img src="img/energyy.png" alt="imagem-energia" class="img-fluid mb-2">
-            <p style="font-weight: bold;">A importância crucial do consumo consciente de energia para um futuro sustentável</p>
+            <!--carousel-->
+            <!--classe "carousel slide" classe do bootstrap que vai aplicar as funcionalidades-->
+            <!--data-bs-ride="carousel" atributo do bootstrap que indica que o carousel inicia automático-->
+            <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+            <!--carousel-inner é a classe do bootstrap que define os container para o carousel-->
+              <div class="carousel-inner">
+                <!--"carousel-item active" esse marca qual é o primeiro item do carousel que ficará visível inicialmente-->
+                <div class="carousel-item active">
+                  <img src="img/energyy.png" class="d-block w-100" alt="Imagem Energias"> 
+                  <!--classe d-block faz com que a imagem seja exibida como um bloco ocupando o espaço do container-->
+                  <!--"w-100" como "witdh:100%" define a largura da imagem como 100%-->
+                </div>
+                <!--Segundo Item do carousel "carousel-item" sem o active ele fica oculto inicialmente-->
+                <div class="carousel-item">
+                  <img src="img/energy2.png" class="d-block w-100" alt="Imagem Energias 2">
+                </div>
+              </div>
+            <p class="mt-2 title">A importância crucial do consumo consciente de energia para um futuro sustentável</p>
             O consumo consciente de energia se tornou uma necessidade urgente para garantir um futuro sustentável para o planeta 
             e para as próximas gerações...<span><a class="leiamais" href="energia.html"> Leia mais</a></span>
             <a href="energia.html" class="icone-da-seta">
@@ -144,10 +187,20 @@
             </a>
           </div>
         </div>
+        </div>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="p-3 coluna L-preta">
-            <img src="img/imagetecno.png" alt="tecnologia-e-sustentabilidade" class="img-fluid mb-2">
-            <p style="font-weight: bold;">Tecnologias Sustentáveis: Construindo um futuro mais verde</p>
+            <!--carousel-->
+            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/imagetecno.png" class="d-block w-100" alt="Imagem Tecnologias">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/imagetecno2.png" class="d-block w-100" alt="Imagem Tecnologias 2">
+                </div>
+              </div>
+            <p class="mt-2 title">Tecnologias Sustentáveis: Construindo um futuro mais verde</p>
             As tecnologias sustentáveis são ferramentas essenciais para enfrentar os desafios ambientais 
             do nosso planeta e construir um futuro mais verde e próspero...<span><a class="leiamais" href="energia.html"> Leia mais</a></span>
             <a href="tecnologias.html" class="icone-da-seta">
@@ -155,10 +208,20 @@
             </a>
           </div>
         </div>
+        </div>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="p-3 coluna L-preta">
-            <img src="img/maozinha.png" alt="ajuda-na-sustenbilidade" class="img-fluid mb-2">
-            <p style="font-weight: bold;">Sustentabilidade: Como fazer a diferença no dia a dia</p>
+            <!--Carousel-->
+            <div id="carousel3" class="carousel slide" data-bs-ride="carousel"> 
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/info-img.png" class="d-block w-100" alt="Imagem Sustentabilidade">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/info-img2.jpeg" class="d-block w-100" alt="Imagem Sustentabilidade 2">
+                </div>
+              </div>
+            <p class="mt-2 title">Sustentabilidade: Como fazer a diferença no dia a dia</p>
             Construir um futuro mais verde e sustentável depende do esforço de todos.
              No entanto, muitas pessoas se sentem perdidas sem saber por onde começar. A boa notícia é que..<span><a class="leiamais" href="energia.html"> Leia mais</a></span>
             <a href="info.html" class="icone-da-seta">
@@ -166,13 +229,14 @@
             </a>
           </div>
         </div> 
-      </div>
   </div>
 </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+
+  <a href="index.php"></a>
   
 </body>
 
