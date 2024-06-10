@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <title>Informações</title>
 </head>
 <style>
-    body {
+  body {
     background-image: url(img/geometric.png);
     padding: 0px;
     margin: 0px;
     height: 100;
-    background-size: cover; /* mantém a proporção e redimensiona para cobrir o espaço todo */
-    background-position: center; /* centraliza a imagem */
-    background-repeat: repeat; 
-    }
-    .navbar-cor {
+    background-size: cover;
+    /* mantém a proporção e redimensiona para cobrir o espaço todo */
+    background-position: center;
+    /* centraliza a imagem */
+    background-repeat: repeat;
+  }
+
+  .navbar-cor {
     padding: 1px;
     height: 50px;
-    }
-    .img-nav {
+  }
+
+  .img-nav {
     width: 55px;
     height: 50px;
-    }
-    ul {
+  }
+
+  ul {
     text-align: center;
   }
+
   /* estilo dos itens da barra de nav */
   .navbar-nav .nav-link {
-    margin-right: 20px; 
-    color: rgb(195, 63, 15) !important; /* !important dá prioridade */
+    margin-right: 20px;
+    color: rgb(195, 63, 15) !important;
+    /* !important dá prioridade */
     font-size: 1.1rem;
     font-weight: bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-    /* Animação */
+
+  /* Animação */
   @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
+
   .nav-item:hover .nav-link {
     animation: pulse 3s infinite;
-    color:rgb(205, 81, 24) !important;
-    background-image:linear-gradient(rgb(250, 202, 125),rgb(248, 154, 99));
+    color: rgb(205, 81, 24) !important;
+    background-image: linear-gradient(rgb(250, 202, 125), rgb(248, 154, 99));
     border-radius: 10px;
     text-decoration: underline;
     padding-right: 5px;
   }
+
   /* cor da letra */
   .L-preta {
-    color:black;
+    color: black;
     font-family: 'Times New Roman', Times, serif;
-    word-wrap: break-word; /*força a quebra de linha, evitando que o texto saia pra fora do box*/
-    word-break: break-word;/*permite que as palavras longas sejam quebradas*/
-    hyphens: auto;/*Habilita a hifen*/
+    font-size: 20px;
+    word-wrap: break-word;
+    /*força a quebra de linha, evitando que o texto saia pra fora do box*/
+    word-break: break-word;
+    /*permite que as palavras longas sejam quebradas*/
+    hyphens: auto;
+    /*Habilita a hifen*/
   }
+
   .container-1 {
     padding: 20px;
     background-color: aliceblue;
@@ -66,164 +90,265 @@
     box-shadow: -10px 10px 20px rgb(254, 164, 74);
     overflow: hidden;
   }
+
   .text-1 {
     padding: 20px;
   }
+
   .image1 img {
     max-width: 100%;
     border-radius: 10px;
   }
+  .frase {
+    font-family: cursive;
+    font-size: 18px;
+  }
   /* Estilos da barra de rolagem */
   ::-webkit-scrollbar {
-      width: 12px;
-    }
+    width: 12px;
+  }
 
-    ::-webkit-scrollbar-track {
-      background: #e5bb6d;
-    }
+  ::-webkit-scrollbar-track {
+    background: #e5bb6d;
+  }
 
-    ::-webkit-scrollbar-thumb {
-      background: #fdac3b;
-      border-radius: 6px;
-    }
+  ::-webkit-scrollbar-thumb {
+    background: #fca42a;
+    border-radius: 6px;
+  }
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #f58b2f;
-    }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f58b2f;
+  }
 
-    /* Estilos para Firefox */
-    body {
-      scrollbar-width: thin;
-      scrollbar-color: #fbb757 #fa964e;
-    }
+  /* Estilos para Firefox */
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #fbb757 #fa964e;
+  }
 </style>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-         <a class="navbar-cor" href="index.html">
-           <img src="img/logo-1.jpg" alt="logo" class="img-nav">
-         </a>
-         <!-- Toggler -->
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span> <!-- span exibe o botão -->
-         </button>    
-         <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav mx-auto">
-             <li class="nav-item">
-               <a class="nav-link active" ariaa-current="page" href="index.html">HOME</a> <!-- "active" indica que o link está ativo e aria-current="page" que representa a página atual -->
-             </li> 
-             <li class="nav-item">
-               <a class="nav-link" href="energia.html">ENERGIA</a> 
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="tecnologias.html">TECNOLOGIAS</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="info.html">INFORMA-SE</a>
-             </li>
-           </ul>
-           </div>
-        </div>
-    </nav>
-    <br>
-    <br>
-    <div class="container my-5"> <!--aplica margem no eixo Y-->
-      <div class="container-1">
-        <div class="row">
-          <div class="col-md-6 order-md-1 image1"> <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem--> 
-            <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/ods12.png" class="d-block w-100" alt="Imagem Tecnologias">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/ods12-2.png" class="d-block w-100" alt="Imagem Tecnologias 2">
-                </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-cor" href="index.html">
+        <img src="img/logo-1.jpg" alt="logo" class="img-nav">
+      </a>
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <!-- span exibe o botão -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" ariaa-current="page" href="index.html">HOME</a>
+            <!-- "active" indica que o link está ativo e aria-current="page" que representa a página atual -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="energia.html">ENERGIA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tecnologias.html">TECNOLOGIAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">INFORMA-SE</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <div class="container my-5"> <!--aplica margem no eixo Y-->
+    <div class="container-1">
+      <div class="row">
+        <div class="col-md-6 order-md-1 image1">
+          <!--col-md-6 adiciona colunas lado a lado-/--order-md-1 altera a ordem-->
+          <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/ods12.png" class="d-block w-100" alt="Imagem Tecnologias">
               </div>
-          </div>
-          </div>
-          <div class="col-md-6 order-md-2 text-1"> 
-            <div class="L-preta">
-              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-              </p>
+              <div class="carousel-item">
+                <img src="img/ods12-2.png" class="d-block w-100" alt="Imagem Tecnologias 2">
+              </div>
             </div>
-            <br>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-2 text-1">
+          <div class="L-preta">
+            <h2 class="mb-4 text-warning">ODS 12: Produção e Consumo Sustentáveis
+            </h2>
+            <p>A <a href="https://brasil.un.org/pt-br/sdgs/12" alt="site da ODS12">ODS 12</a>, um dos <a href="https://brasil.un.org/pt-br/sdgs" alt="17 objetivos 0DS">17 Objetivos de Desenvolvimento Sustentável (ODS)</a> estabelecidos pela ONU em 2015, visa
+              assegurar padrões de produção e consumo sustentáveis. Isso significa mudar a forma como produzimos e
+              consumimos bens e serviços para que sejam mais amigáveis ao meio ambiente, socialmente justos e
+              economicamente viáveis a longo prazo.
+            </p>
+            <p>No Brasil, o ODS 12 é de grande importância, pois o país possui uma rica biodiversidade e recursos
+              naturais, mas enfrenta desafios como o desmatamento, a poluição e a geração de resíduos.</p>
+          </div>
+          <br>
+          <div class="col-md-4 order-md-2 image1 mx-auto">
+            <img src="img/ods12desenho.jpeg" alt="desenho homem sustentável">
+        </div>
+        </div>
+        <div class="col-md-15 order-md-3 text-1">
+          <div class="L-preta">
+            <h2 class="mb-4 text-warning">Por que a ODS 12 é importante?</h2>
+
+            <p><span class="text-warning">Nosso planeta está em perigo:</span> A exploração desenfreada de recursos
+              naturais, a poluição e o desperdício estão colocando em risco a saúde do planeta e o bem-estar das futuras
+              gerações.</p>
+
+            <p><span class="text-warning">Desigualdade e pobreza:</span> Os padrões de consumo atuais beneficiam
+              desproporcionalmente os países ricos, enquanto os mais pobres sofrem com os impactos negativos da produção
+              insustentável.</p>
+
+            <h2 class="mb-4 text-warning">Aqui estão algumas ideias de como você pode contribuir para a ODS 12:</h2>
+
+            <p><span class="text-warning">Reduza o consumo de carne:</span> A produção de carne é um dos maiores
+            contribuintes para as mudanças climáticas e o desmatamento. Experimente reduzir seu consumo de carne ou
+            optar por alternativas vegetarianas ou veganas.
+          </p>
+
+            <p><span class="text-warning">Compre produtos locais e sazonais:</span> Isso ajuda a reduzir a emissão de
+              gases do efeito estufa e apoia a economia local.
+            </p>
+            <p><span class="text-warning">Escolha produtos duráveis e de boa qualidade:</span> Evite produtos
+              descartáveis e de baixa qualidade que acabam rapidamente no lixo.
+            </p>
+            <p><span class="text-warning">Reutilize e repare:</span> Dê uma nova vida aos produtos antes de jogá-los
+              fora.</p>
+            <h2 class="mb-4 text-warning">Uma Jornada Essencial Rumo a um Futuro Sustentável</h2>
+            <p>A ODS 12: Assegurar padrões de produção e consumo sustentáveis se destaca como um pilar fundamental na 
+              construção de um futuro mais verde e próspero para todos. Mais do que um simples objetivo, ela representa
+              um chamado à ação, uma convocação para repensarmos nossa relação com o planeta e com os recursos naturais.
+            </p>
+            <p>Adotar práticas de consumo e produção sustentáveis é essencial para minimizar o impacto ambiental, reduzir a 
+              pegada ecológica e garantir que os recursos naturais sejam utilizados de maneira eficiente e responsável. Isso 
+              envolve a promoção de tecnologias inovadoras, a melhoria na gestão de resíduos e o incentivo ao consumo consciente.
+            </p>
+            <p>Empresas, governos e cidadãos têm um papel crucial nessa transformação. As empresas devem adotar modelos de negócios
+               sustentáveis, implementar processos de produção limpos e investir em produtos que gerem menos resíduos. Os governos 
+               precisam criar políticas públicas que incentivem a sustentabilidade e regulamentem práticas que prejudicam o meio ambiente. 
+               Já os cidadãos, por sua vez, devem fazer escolhas conscientes no dia a dia, optando por produtos ecologicamente corretos e 
+               evitando o desperdício.
+            </p>
+            <p>A ODS 12 não é apenas uma meta para ser atingida, mas um compromisso contínuo com o desenvolvimento sustentável. Ao assegurar 
+              padrões de produção e consumo sustentáveis, estamos não só protegendo o meio ambiente, mas também promovendo a equidade social 
+              e o crescimento econômico sustentável. Assim, pavimentamos o caminho para um mundo onde todas as pessoas possam prosperar, agora 
+              e no futuro.
+            </p>
+            <p>No cerne da ODS 12 reside a compreensão de que os padrões de produção e consumo atuais são insustentáveis. A exploração 
+              desenfreada de recursos, a geração desenfreada de resíduos e a busca incessante por crescimento estão colocando em risco a 
+              saúde do planeta e o bem-estar das futuras gerações. As consequências dessa trajetória insustentável já são sentidas em todo 
+              o mundo. Mudanças climáticas extremas, escassez de recursos hídricos, perda de biodiversidade e degradação do solo são apenas 
+              alguns dos desafios que se avolumam diante de nossos olhos.
+            </p>
+            <p>É nesse contexto que a ODS 12 surge como um farol de esperança, indicando um caminho alternativo rumo a um futuro mais verde 
+              e resiliente. Através da adoção de práticas sustentáveis em todas as etapas da cadeia produtiva, desde a extração de matéria-prima 
+              até o descarte de resíduos, podemos reduzir significativamente os impactos negativos da atividade humana sobre o meio ambiente. 
+              Ao mesmo tempo, reconhece a importância de uma mudança profunda nos hábitos de consumo. Consumir de forma consciente, optar por 
+              produtos duráveis e de boa qualidade, reduzir o desperdício e valorizar a reutilização e a reciclagem são ações essenciais para 
+              a construção de uma sociedade mais sustentável.
+            </p>
+            <p>O alcance das metas exige um compromisso conjunto de governos, empresas e indivíduos. Governos devem implementar 
+              políticas públicas que incentivem a produção sustentável, a economia circular e o consumo consciente. Empresas, por sua vez, 
+              devem incorporar práticas sustentáveis em seus processos produtivos e modelos de negócio. Já os indivíduos, como consumidores e 
+              cidadãos, têm o poder de impulsionar a mudança através de suas escolhas e ações cotidianas.
+            </p>
+            <p>A jornada rumo à concretização da ODS 12 não será fácil. Demandará mudanças profundas em nossos sistemas de produção, 
+              consumo e valores. No entanto, o futuro sustentável que ela almeja está ao nosso alcance. Através da colaboração, da inovação 
+              e do compromisso com as futuras gerações, podemos construir um mundo onde a prosperidade econômica esteja em harmonia com a 
+              proteção ambiental e o bem-estar social.
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="container-1">
-        <div class="row">
-          <div class="col-md-3 order-md-1 image1">
-            <img src="img/AchimSteiner.png" alt="Imagem de Achim Steiner">
-          </div>
-          <div class="col-md-9 order-md-2 text-1">
-            <div class="L-preta">
-              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-              </p>
-            </div>
-          </div>
-            <div class="col-md-3 order-md-3 image1 mt-5">
-              <img src="img/Annie-Leonard.jpg" alt="Imagem de Annie Leonard">
-            </div>
-            <div class="col-md-9 order-md-4 text-1 mt-5">
-              <div class="L-preta">
-                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                  utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                  para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                  salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                  Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                  mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-3 order-md-4 image1 mt-5">
-              <img src="img/paul-greenberg.jpg" alt="Imagem de Paul Greenberg">
-            </div>
-            <div class="col-md-9 order-md-4 text-1 mt-5">
-              <div class="L-preta">
-                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-                  utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-                  para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-                  salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-                  Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-                  mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-                </p>
+  </div>
+  </div>
+  </div>
+  <div class="container my-5">
+    <div class="container-1">
+      <div class="row">
+        <h2 class="mb-5 fs-1 L-preta text-warning">Alguns dos Pioneiros da Sustentabilidade: Líderes e Visionários Transformando o Futuro</h2>
+        <div class="col-md-3 order-md-1 image1 mb-4">
+          <img src="img/AchimSteiner.png" alt="Imagem de Achim Steiner">
+        </div>
+        <div class="col-md-9 order-md-2 text-1 mb-3">
+          <div class="L-preta">
+            <p><span class="fs-3 text-warning">Achim Steiner</span>
+              <br>
+              Ele é um líder internacional em questões ambientais e de desenvolvimento sustentável.
+              Steiner é conhecido por seu papel como Administrador do Programa das Nações Unidas para o Desenvolvimento
+              (PNUD). Durante sua carreira, ele tem sido um defensor proeminente do consumo consciente e seu impacto na
+              promoção da sustentabilidade. Ele enfatiza a importância das escolhas diárias de consumo e defende
+              políticas públicas e iniciativas empresariais que incentivem práticas mais responsáveis para garantir um
+              futuro sustentável para as gerações futuras.
+            </p>
+            <p class="frase">"A sustentabilidade é uma ponte para o futuro que devemos construir hoje."</p>
           </div>
         </div>
-        <div class="col-md-3 order-md-4 image1 mt-5">
+        <div class="col-md-3 order-md-3 image1 mt-3">
+          <img src="img/Annie-Leonard.jpg" alt="Imagem de Annie Leonard">
+        </div>
+        <div class="col-md-9 order-md-4 text-1 mt-3">
+          <div class="L-preta">
+            <p><span class="fs-3 text-warning">Annie Leonard</span>
+              <br>
+              Ela é uma ambientalista conhecida por seu trabalho em "The Story of Stuff" (A História das
+              Coisas), um projeto que começou como um vídeo e se expandiu para incluir uma série de vídeos e um livro.
+              Leonard enfatiza a importância de questionar e repensar os padrões de consumo, oferecendo insights sobre
+              como tomar decisões de compra mais informadas e éticas. Ela destaca a conexão entre consumo excessivo,
+              desigualdade social e degradação ambiental, incentivando os espectadores a considerar o impacto de suas
+              escolhas de consumo não apenas em si mesmos, mas também nas comunidades locais e no planeta.
+            </p>
+            <p class="frase">"Não há nenhum 'jogar fora'. Quando você joga fora algo, ele deve ir para algum lugar."</p>
+          </div>
+        </div>
+        <div class="col-md-3 order-md-4 image1 mt-3">
+          <img src="img/paul-greenberg.jpg" alt="Imagem de Paul Greenberg">
+        </div>
+        <div class="col-md-9 order-md-4 text-1 mt-3">
+          <div class="L-preta">
+            <p><span class="fs-3 text-warning">Paul Greenberg</span> 
+              <br>
+              Ele é um jornalista e ativista ambiental americano conhecido por seus escritos sobre
+              temas relacionados à pesca, sustentabilidade e alimentação. Greenberg é autor do livro "Four Fish: The
+              Future of the Last Wild Food" (Quatro Peixes: O Futuro do Último Alimento Selvagem), no qual examina os
+              desafios enfrentados pela indústria pesqueira global e destaca as práticas de pesca insustentáveis que
+              ameaçam a sobrevivência de várias espécies de peixes. Ele também discute alternativas sustentáveis para a
+              pesca e ressalta a importância de repensar nossos hábitos de consumo para promover práticas mais
+              sustentáveis.
+            </p>
+            <p class="frase">"Como sociedade, precisamos repensar profundamente a maneira como nos relacionamos com o oceano, 
+              reconhecendo que sua saúde está intrinsecamente ligada à nossa própria saúde e bem-estar."</p>
+          </div>
+        </div>
+        <div class="col-md-3 order-md-4 image1 mt-3">
           <img src="img/peter-singer.jpg" alt="Imagem de Peter Singer">
         </div>
-        <div class="col-md-9 order-md-5 text-1 mt-5">
+        <div class="col-md-9 order-md-5 text-1 mt-3">
           <div class="L-preta">
-            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
-              utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
-              para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao
-              salto para a editoração eletrônica, permanecendo essencialmente inalterado.
-              Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e
-              mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-            </p>
-      </div>
-    </div>
+            <p><span class="fs-3 text-warning">Peter Singer</span>
+              <br>
+              Ele é um filósofo moral australiano conhecido por suas contribuições para a ética aplicada,
+              especialmente em áreas como ética animal e ética alimentar. Singer é autor de "Ética da Alimentação", onde
+              argumenta a favor de uma abordagem ética mais consciente em relação à alimentação.</p>
+              <br>
+              <p class="frase">"Para os animais, todo o mundo é um campo de concentração."</p>
+          </div>
         </div>
       </div>
     </div>
-    
-           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-           integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-           crossorigin="anonymous"></script>
-         <script src="js/bootstrap.bundle.min.js"></script>   
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
